@@ -20,10 +20,12 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float DashForce;
     [SerializeField] private float DashCooldown;
     [SerializeField] internal bool HaveBoots;
+    private float moveY = 0f;
+    private float moveX = 0f;
+    private Vector3 MoveDir;
     private int hp = 1;
 
     [Header("Components")]
-    [SerializeField] private CharacterController CC;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private GameObject Player;
     [SerializeField] private Collider BoxCollision;
@@ -38,51 +40,24 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKey(Forward))
         {
-            CC.Move(Vector3.forward * speed * Time.deltaTime);
-            playerRotation = Quaternion.Euler(Player.transform.rotation.x, 0, Player.transform.rotation.z);
-            Player.transform.rotation = playerRotation;
-            for (int i = 0; i < DirectionBool.Count; i++)
-            {
-                DirectionBool[i] = false;
-            }
-            DirectionBool[0] = true;
+            moveY = +1f;
         }
         if (Input.GetKey(Backward))
         {
-            CC.Move(Vector3.back * speed * Time.deltaTime);
-            Player.transform.Rotate(speed * Vector3.back * Time.deltaTime);
-            playerRotation = Quaternion.Euler(Player.transform.rotation.x, -180, Player.transform.rotation.z);
-            Player.transform.rotation = playerRotation;
-            for (int i = 0; i < DirectionBool.Count; i++)
-            {
-                DirectionBool[i] = false;
-            }
-            DirectionBool[1] = true;
+            moveY = -1f;
         }
         if (Input.GetKey(Left))
         {
-            CC.Move(Vector3.left * speed * Time.deltaTime);
-            Player.transform.Rotate(speed * Vector3.left * Time.deltaTime);
-            playerRotation = Quaternion.Euler(Player.transform.rotation.x, -90, Player.transform.rotation.z);
-            Player.transform.rotation = playerRotation;
-            for (int i = 0; i < DirectionBool.Count; i++)
-            {
-                DirectionBool[i] = false;
-            }
-            DirectionBool[2] = true;
+            moveX = +1f;
         }
         if (Input.GetKey(Right))
         {
-            CC.Move(Vector3.right * speed * Time.deltaTime);
-            Player.transform.Rotate(speed * Vector3.right * Time.deltaTime);
-            playerRotation = Quaternion.Euler(Player.transform.rotation.x, 90, Player.transform.rotation.z);
-            Player.transform.rotation = playerRotation;
-            for (int i = 0; i < DirectionBool.Count; i++)
-            {
-                DirectionBool[i] = false;
-            }
-            DirectionBool[3] = true;
+            moveY = -1f;
         }
+
+        MoveDir = new Vector3(moveX, moveY).normalized;
+        rb.velocity = MoveDir;
+
         if (Input.GetKeyDown(Jump))
         {
             if (JumpPoints == 2 && isGrounded)
@@ -114,30 +89,10 @@ public class PlayerInput : MonoBehaviour
 
         if(Input.GetKeyDown(dash))
         {
-            if (DirectionBool[0])
-            {
-                rb.AddForce(Vector3.forward * DashForce, ForceMode.Impulse);
-                StartCoroutine(DashCooldownCoroutine());
-                DashIsAvaiable = false;
-            }
-            if (DirectionBool[1])
-            {
-                rb.AddForce(Vector3.back * DashForce, ForceMode.Impulse);
-                StartCoroutine(DashCooldownCoroutine());
-                DashIsAvaiable = false;
-            }
-            if (DirectionBool[2])
-            {
-                rb.AddForce(Vector3.left * DashForce, ForceMode.Impulse);
-                StartCoroutine(DashCooldownCoroutine());
-                DashIsAvaiable = false;
-            }
-            if (DirectionBool[3])
-            {
-                rb.AddForce(Vector3.right * DashForce, ForceMode.Impulse);
-                StartCoroutine(DashCooldownCoroutine());
-                DashIsAvaiable = false;
-            }
+            rb.AddForce(Player.transform.forward * DashForce, ForceMode.Impulse);
+            StartCoroutine(DashCooldownCoroutine());
+            DashIsAvaiable = false;
+
         }
 
 
