@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6090695682853610778}
   - component: {fileID: 6090695682853610779}
+  - component: {fileID: 526015086732090845}
+  - component: {fileID: 213176499282478516}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -50,19 +52,47 @@ MonoBehaviour:
   Backward: 115
   Left: 113
   Right: 100
-  Jump: 32
-  slide: 306
-  dash: 304
   speed: 2
-  JumpForce: 2
-  JumpPoints: 2
-  DashForce: 2
-  DashCooldown: 2
   HaveBoots: 0
   rb: {fileID: 6090695683972388720}
   Player: {fileID: 6090695683972388725}
   BoxCollision: {fileID: 6090695683972388724}
   DirectionBool: 00000000
+--- !u!114 &526015086732090845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090695682853610777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25944df2f2dce884ab5d6b3fd09617a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dash: 0
+  rb: {fileID: 0}
+  Player: {fileID: 6090695683972388725}
+  DashForce: 500
+  DashCooldown: 3
+  DashTime: 2
+--- !u!114 &213176499282478516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090695682853610777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d235635310b0bc45ac423aac2f2c144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Jump: 0
+  rb: {fileID: 0}
+  Player: {fileID: 0}
+  JumpForce: 0
+  JumpPoints: 0
   isGrounded: 0
 --- !u!1 &6090695683160627881
 GameObject:
