@@ -135,6 +135,16 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 317953196}
+    - target: {fileID: 42966399656576141, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
+        type: 3}
+      propertyPath: slide
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 42966399656576141, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
+        type: 3}
+      propertyPath: basicsMovements
+      value: 
+      objectReference: {fileID: 317953201}
     - target: {fileID: 213176499282478516, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
         type: 3}
       propertyPath: rb
@@ -301,6 +311,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &317953201 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6090695682853610779, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
+    type: 3}
+  m_PrefabInstance: {fileID: 276923098}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317953191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1eb2f1e2f530a4ba0a5a7572d4763a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &688549425
 GameObject:
   m_ObjectHideFlags: 0
