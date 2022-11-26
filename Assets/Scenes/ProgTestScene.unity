@@ -776,17 +776,17 @@ PrefabInstance:
     - target: {fileID: 6090695682853610778, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6090695682853610778, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.0000012964009
       objectReference: {fileID: 0}
     - target: {fileID: 6090695682853610778, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6090695682853610778, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
         type: 3}
@@ -828,6 +828,11 @@ PrefabInstance:
       propertyPath: JumpForce
       value: 350
       objectReference: {fileID: 0}
+    - target: {fileID: 6090695682853610779, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
+        type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1101307758}
     - target: {fileID: 6090695683972388721, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1005,6 +1010,24 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.33572853
   m_Center: {x: 0, y: -0.8305614, z: 0}
+--- !u!143 &1101307758
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101307744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1141378095
 GameObject:
   m_ObjectHideFlags: 0
