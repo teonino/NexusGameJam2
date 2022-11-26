@@ -2,26 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EndDoor : MonoBehaviour
 {
-    [SerializeField] Animator BlackscreenAnimator;
-    [SerializeField] Animator TextAnimator;
+    public EndManager EndManagement;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
             print("Joueur dans trigger");
-            StartCoroutine(EndGame());
+            StartCoroutine(EndManagement.Victory());
         }
     }
 
-    IEnumerator EndGame()
-    {
-        yield return new WaitForSeconds(0.8f);
-        BlackscreenAnimator.SetTrigger("TriggerFade");
-        yield return new WaitForSeconds(1.5f);
-        TextAnimator.SetTrigger("TriggerFade");
-    }
+   
 
 }

@@ -11,7 +11,7 @@ public class MoonManagement : MonoBehaviour
     private Renderer PlaneMaterial;
     private int MoonShapeRandom;
     private int MoonColorRandom;
-    [SerializeField] internal List<bool> SkillsAccess;
+    [SerializeField] public List<bool> SkillsAccess;
     //0 -> Dash
     //1 -> Jump
     //2 -> Slide
@@ -63,6 +63,14 @@ public class MoonManagement : MonoBehaviour
         print("-------------------");
         BannedText.text = "Banned Skills: " + MoonColorRandom;
         AllowedText.text = "Allowed Skills: " + MoonShapeRandom;
+    }
+
+    public void DisableAllSkills()
+    {
+        for (int i = 0; i < SkillsAccess.Count; i++)
+        {
+            SkillsAccess[i] = false;
+        }
     }
 
 }
