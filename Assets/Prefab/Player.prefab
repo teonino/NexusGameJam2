@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 42966399656576141}
   - component: {fileID: 6675486596238902867}
   - component: {fileID: 3666626105960724384}
+  - component: {fileID: 1567557685714310907}
+  - component: {fileID: 8397452041741842523}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -55,10 +57,12 @@ MonoBehaviour:
   Backward: 115
   Left: 113
   Right: 100
+  deg: 0
   rb: {fileID: 0}
   Player: {fileID: 6090695683972388725}
   speed: 2
   HaveBoots: 0
+  characterController: {fileID: 0}
 --- !u!114 &526015086732090845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,11 +147,42 @@ CapsuleCollider:
   m_GameObject: {fileID: 6090695682853610777}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.2434409
   m_Height: 1.493052
   m_Direction: 1
   m_Center: {x: 0.020000003, y: 0.75, z: 0.01}
+--- !u!143 &1567557685714310907
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090695682853610777}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.5
+  m_Radius: 0.2434409
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0.02, y: 0.75, z: 0.01}
+--- !u!135 &8397452041741842523
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090695682853610777}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.33572853
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6090695683160627881
 GameObject:
   m_ObjectHideFlags: 0
