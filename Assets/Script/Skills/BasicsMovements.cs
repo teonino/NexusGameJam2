@@ -18,7 +18,6 @@ public class BasicsMovements : MonoBehaviour
 
     [Header("Anti Falling Damage Boots")]
     [SerializeField] internal bool HaveBoots;
-    private int hp = 1;
 
 
     private void Update()
