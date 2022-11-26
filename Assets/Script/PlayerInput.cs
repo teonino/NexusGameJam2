@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
 
-    [Header("Commons References")
+    [Header("Commons References")]
     public KeyCode Forward;
     public KeyCode Backward;
     public KeyCode Left;
