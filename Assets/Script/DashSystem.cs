@@ -8,7 +8,7 @@ public class DashSystem : MonoBehaviour
     public KeyCode dash;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private GameObject Player;
-    [Header("Dash Property")]
+    [Header("Dash Properties")]
     [SerializeField] internal float DashForce;
     [SerializeField] internal float DashCooldown;
     [SerializeField] internal float DashTime;

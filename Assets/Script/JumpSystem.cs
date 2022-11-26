@@ -9,7 +9,7 @@ public class JumpSystem : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private GameObject Player;
 
-    [Header("Jump Property")]
+    [Header("Jump Properties")]
     [SerializeField] private float JumpForce;
     [SerializeField] private float JumpPoints;
     [SerializeField] bool isGrounded = false;

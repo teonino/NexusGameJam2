@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    [Header("Basics Movements")]
+
+    [Header("Commons References")
     public KeyCode Forward;
     public KeyCode Backward;
     public KeyCode Left;
     public KeyCode Right;
-
-    [Header("Player Characteristics")]
-    [SerializeField] private float speed;
-    [SerializeField] internal bool HaveBoots;
-    private int hp = 1;
-
-    [Header("Components")]
     [SerializeField] private Rigidbody rb;
     [SerializeField] private GameObject Player;
-    [SerializeField] private Collider BoxCollision;
-    [SerializeField] private List<bool> DirectionBool;
-    private Vector3 direction;
-    private Quaternion playerRotation;
+
+    [Header("Movement Property")]
+    [SerializeField] private float speed;
+
+    [Header("Anti Falling Damage Boots")]
+    [SerializeField] internal bool HaveBoots;
+    private int hp = 1;
 
 
     private void Update()
