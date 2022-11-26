@@ -11,7 +11,8 @@ public class Slide : MonoBehaviour
     public float maxSlideTime;
     public float slideFroce;
     float slideTimer;
-    BasicsMovements basicsMovements;
+    public BasicsMovements basicsMovements;
+    float startSpeed;
 
     public float slideYScale;
     float startYScale;
@@ -20,9 +21,12 @@ public class Slide : MonoBehaviour
 
     public bool isSliding;
 
+    float speedDV;
+
     void Start()
     {
         startYScale =  playerObj.transform.localScale.y;
+        startSpeed = basicsMovements.speed;
     }
 
     private void Update()
@@ -56,10 +60,10 @@ public class Slide : MonoBehaviour
 
     void SlideMovement()
     {
-        Vector3 inputDirection = playerObj.transform.forward;
-        rb.AddForce(inputDirection.normalized * slideFroce, ForceMode.Force);
+        //Vector3 inputDirection = playerObj.transform.forward;
+        //rb.AddForce(inputDirection.normalized * slideFroce, ForceMode.Force);
 
-        //basicsMovements.speed = 
+        basicsMovements.speed = Mathf.SmoothDamp(basicsMovements.speed, 0.2f, ref speedDV, 1.5f);
 
         /*slideTimer -= Time.deltaTime;
         if(slideTimer <= 0)
@@ -72,6 +76,6 @@ public class Slide : MonoBehaviour
     {
         isSliding = false;
         playerObj.transform.localScale = new Vector3(playerObj.transform.localScale.x, startYScale, playerObj.transform.localScale.z);
-        
+        basicsMovements.speed = startSpeed;
     }
 }
