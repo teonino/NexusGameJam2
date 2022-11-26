@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class Slide : MonoBehaviour
 {
-    //public Transform orientation;
-    public Rigidbody rb;
-    public GameObject playerObj;
 
+    [Header("Commons References")]
+    public KeyCode slide = KeyCode.LeftControl;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private GameObject Player;
+    public BasicsMovements basicsMovements;
+    [SerializeField] private MoonManagement SkillsAccessManagement;
+    [Header("Dash Properties")]
     public float maxSlideTime;
     public float slideFroce;
     float slideTimer;
-    public BasicsMovements basicsMovements;
     float startSpeed;
-
     public float slideYScale;
     float startYScale;
 
-    public KeyCode slide = KeyCode.LeftControl;
+
 
     public bool isSliding;
 
@@ -25,7 +27,7 @@ public class Slide : MonoBehaviour
 
     void Start()
     {
-        startYScale =  playerObj.transform.localScale.y;
+        startYScale =  Player.transform.localScale.y;
         startSpeed = basicsMovements.speed;
     }
 
@@ -33,7 +35,14 @@ public class Slide : MonoBehaviour
     {
         if(Input.GetKey(slide))
         {
-            StartSlide();
+            if (SkillsAccessManagement.SkillsAccess[2])
+            {
+                StartSlide();
+            }
+            else
+            {
+                print("Slide is not available");
+            }
         }
         else
         {
@@ -52,7 +61,7 @@ public class Slide : MonoBehaviour
     {
         isSliding = true;
 
-        playerObj.transform.localScale = new Vector3(playerObj.transform.localScale.x, slideYScale, playerObj.transform.localScale.z);
+        Player.transform.localScale = new Vector3(Player.transform.localScale.x, slideYScale, Player.transform.localScale.z);
         rb.AddForce(Vector3.down * 150f, ForceMode.Impulse);
 
         slideTimer = maxSlideTime;
@@ -75,7 +84,7 @@ public class Slide : MonoBehaviour
     void StopSlide()
     {
         isSliding = false;
-        playerObj.transform.localScale = new Vector3(playerObj.transform.localScale.x, startYScale, playerObj.transform.localScale.z);
+        Player.transform.localScale = new Vector3(Player.transform.localScale.x, startYScale, Player.transform.localScale.z);
         basicsMovements.speed = startSpeed;
     }
 }
