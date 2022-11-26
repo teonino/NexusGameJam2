@@ -14,7 +14,7 @@ public class BasicsMovements : MonoBehaviour
     [SerializeField] private GameObject Player;
 
     [Header("Movement Property")]
-    [SerializeField] private float speed;
+    [SerializeField] public float speed;
 
     [Header("Anti Falling Damage Boots")]
     [SerializeField] internal bool HaveBoots;

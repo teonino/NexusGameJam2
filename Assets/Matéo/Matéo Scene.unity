@@ -130,6 +130,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 42966399656576141, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 317953196}
+    - target: {fileID: 213176499282478516, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 317953196}
+    - target: {fileID: 213176499282478516, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
+        type: 3}
+      propertyPath: Jump
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 213176499282478516, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 317953191}
+    - target: {fileID: 213176499282478516, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
+        type: 3}
+      propertyPath: JumpForce
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 213176499282478516, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
+        type: 3}
+      propertyPath: JumpPoints
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 526015086732090845, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 317953196}
+    - target: {fileID: 526015086732090845, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
+        type: 3}
+      propertyPath: dash
+      value: 102
+      objectReference: {fileID: 0}
     - target: {fileID: 6090695682853610777, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
         type: 3}
       propertyPath: m_Name
@@ -192,6 +232,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6090695682853610779, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
         type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 317953196}
+    - target: {fileID: 6090695682853610779, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
+        type: 3}
       propertyPath: speed
       value: 6
       objectReference: {fileID: 0}
@@ -226,25 +271,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 276923098}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &317953192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 317953191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eb2d11b987c91743bce0dc2c9be9c41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  playerObj: {fileID: 317953191}
-  maxSlideTime: 2
-  slideFroce: 5
-  slideYScale: 0.5
-  slide: 101
-  isSliding: 0
 --- !u!136 &317953195
 CapsuleCollider:
   m_ObjectHideFlags: 0

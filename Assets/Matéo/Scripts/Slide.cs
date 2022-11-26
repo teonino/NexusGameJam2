@@ -11,6 +11,7 @@ public class Slide : MonoBehaviour
     public float maxSlideTime;
     public float slideFroce;
     float slideTimer;
+    BasicsMovements basicsMovements;
 
     public float slideYScale;
     float startYScale;
@@ -26,9 +27,13 @@ public class Slide : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(slide))
+        if(Input.GetKey(slide))
         {
             StartSlide();
+        }
+        else
+        {
+            StopSlide();
         }
     }
 
@@ -44,7 +49,7 @@ public class Slide : MonoBehaviour
         isSliding = true;
 
         playerObj.transform.localScale = new Vector3(playerObj.transform.localScale.x, slideYScale, playerObj.transform.localScale.z);
-        rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+        rb.AddForce(Vector3.down * 150f, ForceMode.Impulse);
 
         slideTimer = maxSlideTime;
     }
@@ -54,11 +59,13 @@ public class Slide : MonoBehaviour
         Vector3 inputDirection = playerObj.transform.forward;
         rb.AddForce(inputDirection.normalized * slideFroce, ForceMode.Force);
 
-        slideTimer -= Time.deltaTime;
+        //basicsMovements.speed = 
+
+        /*slideTimer -= Time.deltaTime;
         if(slideTimer <= 0)
         {
             StopSlide();
-        }
+        }*/
     }
 
     void StopSlide()
