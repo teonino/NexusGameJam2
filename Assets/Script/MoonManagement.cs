@@ -63,6 +63,7 @@ public class MoonManagement : MonoBehaviour
         print("-------------------");
         BannedText.text = "Banned Skills: " + MoonColorRandom;
         AllowedText.text = "Allowed Skills: " + MoonShapeRandom;
+       
     }
 
 }
