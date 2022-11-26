@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6090695682853610777}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.66, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59,7 +59,6 @@ MonoBehaviour:
   DashForce: 2
   DashCooldown: 2
   HaveBoots: 0
-  CC: {fileID: 0}
   rb: {fileID: 6090695683972388720}
   Player: {fileID: 6090695683972388725}
   BoxCollision: {fileID: 6090695683972388724}

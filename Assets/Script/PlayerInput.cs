@@ -20,8 +20,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float DashForce;
     [SerializeField] private float DashCooldown;
     [SerializeField] internal bool HaveBoots;
-    private float moveY = 0f;
-    private float moveX = 0f;
+
     private Vector3 MoveDir;
     private int hp = 1;
 
@@ -40,23 +39,25 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKey(Forward))
         {
-            moveY = +1f;
+            this.transform.Translate(transform.forward * speed * Time.deltaTime);
+            Player.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if (Input.GetKey(Backward))
         {
-            moveY = -1f;
+            this.transform.Translate(-transform.forward * speed * Time.deltaTime);
+            Player.transform.rotation = Quaternion.Euler(0, -180, 0);
         }
         if (Input.GetKey(Left))
         {
-            moveX = +1f;
+            this.transform.Translate(-transform.right * speed * Time.deltaTime);
+            Player.transform.rotation = Quaternion.Euler(0, -90, 0);
         }
         if (Input.GetKey(Right))
         {
-            moveY = -1f;
+            this.transform.Translate(transform.right * speed * Time.deltaTime);
+            Player.transform.rotation = Quaternion.Euler(0, 90, 0);
         }
 
-        MoveDir = new Vector3(moveX, moveY).normalized;
-        rb.velocity = MoveDir;
 
         if (Input.GetKeyDown(Jump))
         {
