@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GameManager
   - Ground
+  - Blackscreen
   layers:
   - Default
   - TransparentFX
