@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 42966399656576141}
   - component: {fileID: 6675486596238902867}
   - component: {fileID: 3666626105960724384}
+  - component: {fileID: 1567557685714310907}
+  - component: {fileID: 8397452041741842523}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -55,10 +57,12 @@ MonoBehaviour:
   Backward: 115
   Left: 113
   Right: 100
+  deg: 0
   rb: {fileID: 0}
   Player: {fileID: 6090695683972388725}
   speed: 2
   HaveBoots: 0
+  characterController: {fileID: 0}
 --- !u!114 &526015086732090845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +78,7 @@ MonoBehaviour:
   dash: 0
   rb: {fileID: 0}
   Player: {fileID: 6090695683972388725}
+  SkillsAccessManagement: {fileID: 0}
   DashForce: 500
   DashCooldown: 3
   DashTime: 2
@@ -92,6 +97,7 @@ MonoBehaviour:
   Jump: 0
   rb: {fileID: 0}
   Player: {fileID: 0}
+  SkillsAccessManagement: {fileID: 0}
   JumpForce: 0
   JumpPoints: 0
   isGrounded: 0
@@ -107,12 +113,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb2d11b987c91743bce0dc2c9be9c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slide: 306
   rb: {fileID: 0}
-  playerObj: {fileID: 6090695682853610777}
+  Player: {fileID: 0}
+  basicsMovements: {fileID: 0}
+  SkillsAccessManagement: {fileID: 0}
   maxSlideTime: 2
   slideFroce: 10
   slideYScale: 0.5
-  slide: 306
   isSliding: 0
 --- !u!54 &6675486596238902867
 Rigidbody:
@@ -139,10 +147,41 @@ CapsuleCollider:
   m_GameObject: {fileID: 6090695682853610777}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Enabled: 0
+  m_Radius: 0.2434409
+  m_Height: 1.493052
   m_Direction: 1
+  m_Center: {x: 0.020000003, y: 0.75, z: 0.01}
+--- !u!143 &1567557685714310907
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090695682853610777}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.5
+  m_Radius: 0.2434409
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0.02, y: 0.75, z: 0.01}
+--- !u!135 &8397452041741842523
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090695682853610777}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.33572853
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6090695683160627881
 GameObject:
@@ -274,7 +313,7 @@ GameObject:
   - component: {fileID: 6090695683972388726}
   - component: {fileID: 6090695683972388727}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -302,7 +341,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6090695683972388725}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 8850116265518966187, guid: b34257ad3c127ae4f9bac9589a7c7ccb, type: 3}
 --- !u!23 &6090695683972388727
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -323,7 +362,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 1a8a3e161f330514bbf756faf0ee5d1f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
