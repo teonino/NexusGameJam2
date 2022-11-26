@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HoleVolume : MonoBehaviour
 {
-    [SerializeField] private PlayerInput Input;
+    [SerializeField] private BasicsMovements Input;
 
     private void Update()
     {
