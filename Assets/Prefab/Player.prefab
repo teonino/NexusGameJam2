@@ -147,7 +147,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6090695682853610777}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.2434409
   m_Height: 1.493052
   m_Direction: 1
@@ -163,13 +163,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1.5
+  m_Radius: 0.2434409
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.02, y: 0.75, z: 0.01}
 --- !u!135 &8397452041741842523
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.33572853
-  m_Center: {x: 0, y: -0.8305614, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6090695683160627881
 GameObject:
   m_ObjectHideFlags: 0
