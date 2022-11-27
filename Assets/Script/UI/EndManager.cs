@@ -45,8 +45,9 @@ public class EndManager : MonoBehaviour
 
     public IEnumerator Respawn()
     {
-        yield return new WaitForSeconds(0.8f);
+        
         BlackscreenAnimator.SetTrigger("TriggerFade");
+        yield return new WaitForSeconds(0.8f);
         SceneManager.LoadScene("Game");
         
     }

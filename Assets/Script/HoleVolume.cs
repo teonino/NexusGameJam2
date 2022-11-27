@@ -12,6 +12,8 @@ public class HoleVolume : MonoBehaviour
     public float EndTime;
     public float TotalTime;
 
+    bool firstTime;
+
     private void Start()
     {
         StartTime = Time.time;
@@ -19,15 +21,31 @@ public class HoleVolume : MonoBehaviour
 
     private void Update()
     {
-        TotalTime = (Time.time - StartTime) / EndTime;
-        transform.localScale = Vector3.Slerp(InitialScale, FinalScale, TotalTime);    
-        
+        if(!firstTime)
+        {
+            TotalTime = (Time.time - StartTime) / EndTime;
+            transform.localScale = Vector3.Slerp(InitialScale, FinalScale, TotalTime);
+        }
+        else
+        {
+            StartCoroutine(StartHoleTimer());
+            firstTime = false;
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
-            EndManage.Respawn();
+            print("Mort");
+            StartCoroutine(EndManage.Respawn());
         }
+    }
+
+    IEnumerator StartHoleTimer()
+    {
+        print("Coroutine entrée");
+        yield return new WaitForSeconds(5f);
+        
+        print("Coroutine Sortie");
     }
 }

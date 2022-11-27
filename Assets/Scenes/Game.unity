@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03502685, g: 0.00852715, b: 0.023146378, a: 1}
+  m_IndirectSpecularColor: {r: 0.035060998, g: 0.00851115, b: 0.023133265, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4530,12 +4530,12 @@ PrefabInstance:
     - target: {fileID: 5304469954226769200, guid: cbbaf12a47c45f046b485dcc963ce20e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.87
+      value: -3.65
       objectReference: {fileID: 0}
     - target: {fileID: 5304469954226769200, guid: cbbaf12a47c45f046b485dcc963ce20e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.64
+      value: 3.47
       objectReference: {fileID: 0}
     - target: {fileID: 5304469954226769200, guid: cbbaf12a47c45f046b485dcc963ce20e,
         type: 3}
@@ -5774,12 +5774,12 @@ PrefabInstance:
     - target: {fileID: 7813658424268743438, guid: 769a1deed83036c44acaa18eb4141a9c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.23
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7813658424268743438, guid: 769a1deed83036c44acaa18eb4141a9c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.09
+      value: 0.147
       objectReference: {fileID: 0}
     - target: {fileID: 7813658424268743438, guid: 769a1deed83036c44acaa18eb4141a9c,
         type: 3}
@@ -8549,12 +8549,12 @@ PrefabInstance:
     - target: {fileID: 4195951666710110880, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.1699996
+      value: -3.65
       objectReference: {fileID: 0}
     - target: {fileID: 4195951666710110880, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.459998
+      value: 3.47
       objectReference: {fileID: 0}
     - target: {fileID: 4195951666710110880, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
         type: 3}
