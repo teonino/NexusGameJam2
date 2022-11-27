@@ -11,14 +11,9 @@ public class MainMenu : MonoBehaviour
     public GameObject CreditsPanel;
     public GameObject MainPanel;
     public AudioSource MainMusic;
-    public Slider SliderMusic;
-    public Music musicScript;
 
-    private void Start()
-    {
-        AudioListener.volume = SliderMusic.value;
-        musicScript.MusicVolume = AudioListener.volume;
-    }
+
+
 
     public void DisplayOptions()
     {
@@ -63,10 +58,6 @@ public class MainMenu : MonoBehaviour
 
     }
 
-    public void OnValueChanged()
-    {
-        AudioListener.volume = SliderMusic.value;
-        musicScript.MusicVolume = AudioListener.volume;
-    }
+
 
 }

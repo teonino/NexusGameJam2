@@ -8,12 +8,13 @@ public class MoonManagement : MonoBehaviour
     [SerializeField] internal GameObject MoonObject;
     [SerializeField] internal List<Material> MoonShape;
     private Renderer PlaneMaterial;
-    private int MoonShapeRandom;
+    public int MoonShapeRandom;
     [SerializeField] public HoleVolume Blackhole;
     [SerializeField] public List<bool> SkillsAccess;
     //0 -> Dash
     //1 -> Jump
     //2 -> Slide
+    public Voice VoiceScript;
     internal int i = 0;
 
     private void Start()
@@ -21,6 +22,7 @@ public class MoonManagement : MonoBehaviour
         PlaneMaterial = MoonObject.GetComponent<Renderer>();
         PlaneMaterial.enabled = true;
         GenerateShapeAndColors();
+
     }
 
     private void Update()
@@ -28,6 +30,10 @@ public class MoonManagement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Q))
         {
             GenerateShapeAndColors(); 
+        }
+        if(VoiceScript == null)
+        {
+            VoiceScript = GameObject.Find("VoiceMusic").GetComponent<Voice>();
         }
 
     }
@@ -54,7 +60,7 @@ public class MoonManagement : MonoBehaviour
         PlaneMaterial.sharedMaterial = MoonShape[MoonShapeRandom];
         Blackhole.EndTime -= 5f;
 
-
+        VoiceScript.MoonSkillsVoiceLine();
         print("MoonShapeRandom :" + MoonShapeRandom);
 
        

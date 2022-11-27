@@ -5,7 +5,8 @@ using UnityEngine;
 public class Music : MonoBehaviour
 {
     public float MusicVolume;
-    [SerializeField] AudioClip[] music;
+
+    [SerializeField] public AudioClip[] music;
     private AudioSource AudioMenu;
     public int AudioToPlay = 0;
 
@@ -23,6 +24,7 @@ public class Music : MonoBehaviour
         {
             ChangeMusic();
         }
+        MusicVolume = AudioMenu.volume;
     }
 
     public void ChangeMusic()
