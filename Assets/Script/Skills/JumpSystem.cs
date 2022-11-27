@@ -12,7 +12,7 @@ public class JumpSystem : MonoBehaviour
     [Header("Jump Properties")]
     [SerializeField] private float JumpForce;
     [SerializeField] private float JumpPoints;
-    [SerializeField] bool isGrounded = false;
+    [SerializeField] bool isGrounded = true;
 
 
     // Update is called once per frame
