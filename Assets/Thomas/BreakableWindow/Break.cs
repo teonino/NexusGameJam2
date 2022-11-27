@@ -8,7 +8,7 @@ public class Break : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.relativeVelocity.magnitude > magnitudeCol)
+		if (collision.relativeVelocity.magnitude > magnitudeCol && collision.transform.tag == "Player")
 		{
 			Destroy(gameObject);
 			Instantiate(brokenObject, transform.position, transform.rotation);

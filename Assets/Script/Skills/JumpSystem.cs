@@ -38,7 +38,7 @@ public class JumpSystem : MonoBehaviour
                     animator.SetTrigger("Jump");
                     print("Double jump");
                     //rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * JumpForce, rb.velocity.z);
-                    rb.AddForce(Vector3.up * (JumpForce/0.5f), ForceMode.Impulse);
+                    rb.AddForce(Vector3.up * (JumpForce/1.5f), ForceMode.Impulse);
                     JumpPoints -= 1;
                     isGrounded = false;
                 }

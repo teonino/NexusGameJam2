@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndManager : MonoBehaviour
 {
@@ -64,7 +65,7 @@ public class EndManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.8f);
         BlackscreenAnimator.SetTrigger("TriggerFade");
-        MoonScript.GenerateShapeAndColors();
+        SceneManager.LoadScene("Game");
         
     }
 
