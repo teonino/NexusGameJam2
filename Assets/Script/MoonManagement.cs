@@ -51,7 +51,7 @@ public class MoonManagement : MonoBehaviour
             SkillsAccess[i] = false;
         }
 
-        SkillsAccess[MoonShapeRandom] = false;
+        SkillsAccess[MoonShapeRandom] = true;
         PlaneMaterial.sharedMaterial = MoonShape[MoonShapeRandom];
         Blackhole.EndTime -= 5f;
 
