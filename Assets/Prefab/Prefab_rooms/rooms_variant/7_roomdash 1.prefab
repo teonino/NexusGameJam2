@@ -4247,6 +4247,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: dash_doorwall
       objectReference: {fileID: 0}
+    - target: {fileID: 3244820577908193180, guid: 897978e9d56869546941201129dcf721,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d7968db4f17fa44d8da2256de04ad0b, type: 2}
     - target: {fileID: 4405037492779376114, guid: 897978e9d56869546941201129dcf721,
         type: 3}
       propertyPath: m_RootOrder
