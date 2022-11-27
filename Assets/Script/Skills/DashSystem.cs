@@ -14,6 +14,7 @@ public class DashSystem : MonoBehaviour
     [SerializeField] internal float DashCooldown;
     [SerializeField] internal float DashTime;
     internal bool DashIsAvaiable = true;
+    public Animator animator;
 
     // Update is called once per frame
     void Update()
@@ -24,7 +25,7 @@ public class DashSystem : MonoBehaviour
             {
                 if (DashIsAvaiable)
                 {
-                    print(DashIsAvaiable);
+                    animator.SetTrigger("Dash");
                     rb.AddForce(transform.forward * DashForce, ForceMode.Impulse);
                     StartCoroutine(DashCooldownCoroutine());
                     DashIsAvaiable = false;
@@ -32,7 +33,7 @@ public class DashSystem : MonoBehaviour
             }
             else
             {
-                print("Dash is not available");
+                
             }
         }
     }
