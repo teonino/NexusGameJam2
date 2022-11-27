@@ -38,12 +38,13 @@ public class BasicsMovements : MonoBehaviour
         deg = getOrientationDeg(vec3);
         if (Input.GetKey(Left) || Input.GetKey(Right) || Input.GetKey(Forward) || Input.GetKey(Backward))
         {
+            animator.SetBool("Run", true);
             Vector3 orientation = new Vector3(Mathf.Sin(Mathf.Deg2Rad * deg), 0, Mathf.Cos(Mathf.Deg2Rad * deg)).normalized;
             Player.transform.rotation = Quaternion.Euler(0, deg, 0);
             rb.velocity = new Vector3(orientation.x * speed, rb.velocity.y, orientation.z * speed);
             //rb.velocity.x = orientation.x * speed;
            
-            animator.SetBool("Run", true);
+            
         }
         else
         {

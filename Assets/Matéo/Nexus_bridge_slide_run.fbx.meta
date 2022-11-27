@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Take 001
+    second: Bridge
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -22,7 +22,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
       rotation in copied configuration does not match rotation in animation file:\n\t'HipPart2_L'
-      : rotation error = 18.657194 deg\n"
+      : rotation error = 18.657192 deg\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
@@ -31,6 +31,7 @@ ModelImporter:
       humanoid transforms and has rotation animation that will be discarded.\n\t'RootPart1_M'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Spine1_M'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Spine1Part2_M'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'NeckPart2_M'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Scapula_R'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_R'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_R'
@@ -55,7 +56,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Bridge
       takeName: Take 001
       internalID: 0
       firstFrame: 20
