@@ -146,7 +146,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 7831641543255143599}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.2434409
   m_Height: 1.493052
   m_Direction: 1
@@ -159,7 +159,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7831641543255143599}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.33572853
