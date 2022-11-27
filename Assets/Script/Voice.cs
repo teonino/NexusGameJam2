@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Voice : MonoBehaviour
 {
-    [SerializeField] public AudioClip[] voiceline;
+    [SerializeField] public AudioClip[] Technicalvoiceline;
+    [SerializeField] public AudioClip[] Introvoiceline;
+    [SerializeField] public AudioClip[] Moonvoiceline;
     private AudioSource AudioMenu;
     public float VoiceVolume;
     public Music musicScript;
+    public MoonManagement MoonRef;
 
     private void Awake()
     {
@@ -15,8 +18,21 @@ public class Voice : MonoBehaviour
         AudioMenu = GetComponent<AudioSource>();
     }
 
-    //AudioMenu.clip = music[AudioToPlay];
-    //        AudioMenu.Play();
+
+
+    public IEnumerator introVoiceLine()
+    {
+        AudioMenu.clip = Introvoiceline[0];
+        AudioMenu.Play();
+        yield return new WaitForSeconds(7.2f);
+    }
+
+    public void MoonSkillsVoiceLine()
+    {
+        AudioMenu.clip = Moonvoiceline[MoonRef.MoonShapeRandom];
+        AudioMenu.Play();
+    }
+
 
 
 }
