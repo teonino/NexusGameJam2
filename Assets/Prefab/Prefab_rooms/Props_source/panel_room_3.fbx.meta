@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: dark_metal1
+    second: {fileID: 2100000, guid: ece28195eabf9164998215735eb720b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: neon_main1
     second: {fileID: 2100000, guid: fa0fb13b96576c3499c31c7d139a3349, type: 2}
   - first:
