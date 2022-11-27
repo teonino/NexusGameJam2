@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 187898558496724714}
   m_Layer: 0
   m_Name: 8_exit
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6505,6 +6505,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: panel_room_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d6e5d3c9926ed7b42973bd3bd90ded08,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e5d3c9926ed7b42973bd3bd90ded08, type: 3}

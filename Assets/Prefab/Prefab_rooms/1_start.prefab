@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: -8326897409962542057}
   m_Layer: 0
   m_Name: 1_start
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,6 +407,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: panel_floor_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 035f2771b0b970f4f9643f5e6a4c8ea8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 035f2771b0b970f4f9643f5e6a4c8ea8, type: 3}
@@ -907,6 +912,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: connector_floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3455c61a7c60ac24ba8fff6066391485,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3455c61a7c60ac24ba8fff6066391485, type: 3}
