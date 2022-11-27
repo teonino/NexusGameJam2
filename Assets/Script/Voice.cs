@@ -18,7 +18,13 @@ public class Voice : MonoBehaviour
         AudioMenu = GetComponent<AudioSource>();
     }
 
-
+    private void Update()
+    {
+        if (MoonRef == null)
+        {
+            MoonRef = GameObject.Find("gameManager").GetComponent<MoonManagement>();
+        }
+    }
 
     public IEnumerator introVoiceLine()
     {
@@ -32,6 +38,7 @@ public class Voice : MonoBehaviour
         AudioMenu.clip = Moonvoiceline[MoonRef.MoonShapeRandom];
         AudioMenu.Play();
     }
+
 
 
 
