@@ -12,12 +12,8 @@ public class HoleVolume : MonoBehaviour
     public float EndTime;
     public float TotalTime;
 
-    bool firstTime;
+    bool firstTime = true;
 
-    private void Start()
-    {
-        StartTime = Time.time;
-    }
 
     private void Update()
     {
@@ -28,8 +24,7 @@ public class HoleVolume : MonoBehaviour
         }
         else
         {
-            yield return StartCoroutine("WaitAndPrint");
-            firstTime = false;
+            StartCoroutine(StartHoleTimer());
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -40,12 +35,13 @@ public class HoleVolume : MonoBehaviour
             StartCoroutine(EndManage.Respawn());
         }
     }
-
     IEnumerator StartHoleTimer()
     {
         print("Coroutine entrée");
         yield return new WaitForSeconds(5f);
-        
+        firstTime = false;
+        StartTime = Time.time;
         print("Coroutine Sortie");
     }
+
 }
