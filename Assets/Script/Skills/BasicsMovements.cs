@@ -37,9 +37,14 @@ public class BasicsMovements : MonoBehaviour
         deg = getOrientationDeg(vec3);
         if (Input.GetKey(Left) || Input.GetKey(Right) || Input.GetKey(Forward) || Input.GetKey(Backward))
         {
-            Vector3 orientation = new Vector3(Mathf.Sin(Mathf.Deg2Rad * deg), Player.transform.rotation.y, Mathf.Cos(Mathf.Deg2Rad * deg)).normalized;
+            Vector3 orientation = new Vector3(Mathf.Sin(Mathf.Deg2Rad * deg), 0, Mathf.Cos(Mathf.Deg2Rad * deg)).normalized;
             Player.transform.rotation = Quaternion.Euler(0, deg, 0);
-            rb.velocity = orientation * speed;
+            rb.velocity = new Vector3(orientation.x * speed, rb.velocity.y, orientation.z * speed);
+            //rb.velocity.x = orientation.x * speed;
+        }
+        else
+        {
+            rb.velocity = new Vector3(0, rb.velocity.y, 0);
         }
 
 
