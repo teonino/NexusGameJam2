@@ -28,7 +28,7 @@ public class HoleVolume : MonoBehaviour
         }
         else
         {
-            StartCoroutine(StartHoleTimer());
+            yield return StartCoroutine("WaitAndPrint");
             firstTime = false;
         }
     }
