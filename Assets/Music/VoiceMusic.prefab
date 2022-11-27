@@ -147,7 +147,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4d59f8514db227d4592233d499e9eb22, type: 3}
   - {fileID: 8300000, guid: 6cdf95bbe6094574d9558bc1a83a7485, type: 3}
   - {fileID: 8300000, guid: e4cb40fb999932a4e9b632452df90bbb, type: 3}
-  - {fileID: 0}
   Introvoiceline:
   - {fileID: 8300000, guid: e887747c790867748be70b645622dfbb, type: 3}
   Moonvoiceline:
@@ -156,3 +155,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f159746cab95be84a989e1bf41590c8d, type: 3}
   VoiceVolume: 0
   musicScript: {fileID: 0}
+  MoonRef: {fileID: 0}
