@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 143ff1fa6c670dd469e9df0e98761459
+guid: f3369305f4a7e6b40ae3f9e05a1aafb9
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: neon_blue
-    second: {fileID: 2100000, guid: e6840b998d500224498364afd550c656, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
