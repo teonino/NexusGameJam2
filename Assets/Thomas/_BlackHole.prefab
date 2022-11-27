@@ -9635,7 +9635,6 @@ GameObject:
   - component: {fileID: 3549145861786225183}
   - component: {fileID: 4428057758393907057}
   - component: {fileID: 4380169913695000800}
-  - component: {fileID: 8074486606105585414}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -9708,19 +9707,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8074486606105585414
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2999394443813625666}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7133510341317530593
 GameObject:
   m_ObjectHideFlags: 0
@@ -9730,6 +9716,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7813658424268743438}
+  - component: {fileID: 499885032147895361}
   m_Layer: 0
   m_Name: _BlackHole
   m_TagString: Untagged
@@ -9756,6 +9743,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &499885032147895361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7133510341317530593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a12f834ced92145b987fe32e7b6dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EndManage: {fileID: 0}
+  InitialScale: {x: 0, y: 0, z: 0}
+  FinalScale: {x: 0, y: 0, z: 0}
+  EndTime: 0
+  TotalTime: 0
 --- !u!1001 &5300424079310725365
 PrefabInstance:
   m_ObjectHideFlags: 0

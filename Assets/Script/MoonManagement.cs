@@ -7,16 +7,14 @@ public class MoonManagement : MonoBehaviour
 {
     [SerializeField] internal GameObject MoonObject;
     [SerializeField] internal List<Material> MoonShape;
-    [SerializeField] internal List<Color> MoonColor;
     private Renderer PlaneMaterial;
     private int MoonShapeRandom;
-    private int MoonColorRandom;
+    [SerializeField] public HoleVolume Blackhole;
     [SerializeField] public List<bool> SkillsAccess;
     //0 -> Dash
     //1 -> Jump
     //2 -> Slide
     public TextMeshProUGUI BannedText;
-    public TextMeshProUGUI AllowedText;
     internal int i = 0;
 
     private void Start()
@@ -30,7 +28,6 @@ public class MoonManagement : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
-            i += 1;
             GenerateShapeAndColors(); 
         }
 
@@ -38,31 +35,30 @@ public class MoonManagement : MonoBehaviour
 
     internal void GenerateShapeAndColors()
     {
-        MoonShapeRandom = Random.Range(0, 3);
-       MoonColorRandom = Random.Range(0, 3);
-        while (MoonShapeRandom == MoonColorRandom)
+        if(MoonShapeRandom == 2)
         {
-            Debug.LogWarning("Same Value Detected And changed");
-            MoonColorRandom = Random.Range(0, 3);
+            MoonShapeRandom = 0;
         }
+        else
+        {
+            MoonShapeRandom += 1;
+        }
+
+
 
         for(int i = 0; i < SkillsAccess.Count; i++)
         {
             SkillsAccess[i] = false;
         }
 
-        SkillsAccess[MoonShapeRandom] = true;
-        SkillsAccess[MoonColorRandom] = false;
+        SkillsAccess[MoonShapeRandom] = false;
         PlaneMaterial.sharedMaterial = MoonShape[MoonShapeRandom];
-        PlaneMaterial.sharedMaterial.color = MoonColor[MoonColorRandom];
-        
+        Blackhole.EndTime -= 5f;
 
-        print("----- TEST " + i + "-----");
+
         print("MoonShapeRandom :" + MoonShapeRandom);
-        print("MoonColorRandom :" + MoonColorRandom);
-        print("-------------------");
-        BannedText.text = "Banned Skills: " + MoonColorRandom;
-        AllowedText.text = "Allowed Skills: " + MoonShapeRandom;
+        BannedText.text = "Banned Skills: " + MoonShapeRandom;
+
        
     }
 
