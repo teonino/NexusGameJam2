@@ -61,6 +61,7 @@ public class Slide : MonoBehaviour
     }
     void StartSlide()
     {
+        animator.SetBool("Run", false);
         animator.SetBool("Slide", true);
         isSliding = true;
 
@@ -92,5 +93,6 @@ public class Slide : MonoBehaviour
         Player.transform.localScale = new Vector3(Player.transform.localScale.x, startYScale, Player.transform.localScale.z);
         basicsMovements.speed = startSpeed;
         animator.SetBool("Slide", false);
+        animator.SetBool("Run", false);
     }
 }

@@ -13,6 +13,7 @@ public class BasicsMovements : MonoBehaviour
     public int deg = 0;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private GameObject Player;
+    public Animator animator;
 
     [Header("Movement Property")]
     [SerializeField] public float speed;
@@ -41,10 +42,14 @@ public class BasicsMovements : MonoBehaviour
             Player.transform.rotation = Quaternion.Euler(0, deg, 0);
             rb.velocity = new Vector3(orientation.x * speed, rb.velocity.y, orientation.z * speed);
             //rb.velocity.x = orientation.x * speed;
+           
+            animator.SetBool("Run", true);
         }
         else
         {
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
+
+            animator.SetBool("Run", false);
         }
 
 
