@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 2814066610785480251}
   m_Layer: 0
   m_Name: 3_hallwCR
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -628,6 +628,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: connector_floor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3455c61a7c60ac24ba8fff6066391485,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3455c61a7c60ac24ba8fff6066391485, type: 3}
 --- !u!4 &2060661329195036584 stripped
@@ -777,6 +782,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: panel_floor_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 035f2771b0b970f4f9643f5e6a4c8ea8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 035f2771b0b970f4f9643f5e6a4c8ea8, type: 3}
@@ -1078,6 +1088,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: panel_floor_2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 035f2771b0b970f4f9643f5e6a4c8ea8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 035f2771b0b970f4f9643f5e6a4c8ea8, type: 3}
 --- !u!4 &5451203568715109093 stripped
@@ -1153,6 +1168,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: connector_floor (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3455c61a7c60ac24ba8fff6066391485,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3455c61a7c60ac24ba8fff6066391485, type: 3}
 --- !u!4 &6180671803563667199 stripped
@@ -1227,6 +1247,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: panel_floor_cornersection
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2517dc1048e14eb48acca6371fe2287c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2517dc1048e14eb48acca6371fe2287c, type: 3}
@@ -1452,6 +1477,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: connector_floor (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3455c61a7c60ac24ba8fff6066391485,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3455c61a7c60ac24ba8fff6066391485, type: 3}

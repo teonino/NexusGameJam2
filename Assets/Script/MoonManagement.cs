@@ -14,7 +14,6 @@ public class MoonManagement : MonoBehaviour
     //0 -> Dash
     //1 -> Jump
     //2 -> Slide
-    public TextMeshProUGUI BannedText;
     internal int i = 0;
 
     private void Start()
@@ -57,7 +56,6 @@ public class MoonManagement : MonoBehaviour
 
 
         print("MoonShapeRandom :" + MoonShapeRandom);
-        BannedText.text = "Banned Skills: " + MoonShapeRandom;
 
        
     }

@@ -710,7 +710,7 @@ GameObject:
   - component: {fileID: 5831712148282071932}
   m_Layer: 0
   m_Name: 6_roomjump
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1201,6 +1201,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: panel_room_2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4d9ea0e7ece759c4094e4582f3d56d7e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d9ea0e7ece759c4094e4582f3d56d7e, type: 3}
 --- !u!4 &364833289850739179 stripped
@@ -1575,6 +1580,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: connector_floor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3455c61a7c60ac24ba8fff6066391485,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3455c61a7c60ac24ba8fff6066391485, type: 3}
@@ -3525,6 +3535,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: connector_floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3455c61a7c60ac24ba8fff6066391485,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3455c61a7c60ac24ba8fff6066391485, type: 3}
