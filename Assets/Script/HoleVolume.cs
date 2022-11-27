@@ -12,12 +12,20 @@ public class HoleVolume : MonoBehaviour
     public float EndTime;
     public float TotalTime;
 
+    public Voice VoiceScript;
+
     bool firstTime = true;
 
 
     private void Update()
+
     {
-        if(!firstTime)
+        if (VoiceScript == null)
+        {
+            VoiceScript = GameObject.Find("VoiceMusic").GetComponent<Voice>();
+        }
+
+        if (!firstTime)
         {
             TotalTime = (Time.time - StartTime) / EndTime;
             transform.localScale = Vector3.Slerp(InitialScale, FinalScale, TotalTime);
@@ -26,6 +34,7 @@ public class HoleVolume : MonoBehaviour
         {
             StartCoroutine(StartHoleTimer());
         }
+
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -38,6 +47,7 @@ public class HoleVolume : MonoBehaviour
     IEnumerator StartHoleTimer()
     {
         print("Coroutine entrée");
+        StartCoroutine(VoiceScript.Intro());
         yield return new WaitForSeconds(5f);
         firstTime = false;
         StartTime = Time.time;

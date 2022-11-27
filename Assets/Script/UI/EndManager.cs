@@ -13,6 +13,7 @@ public class EndManager : MonoBehaviour
     [SerializeField] List<Animator> buttonAnimator;
     [SerializeField] public MoonManagement SkillsManagement;
     [SerializeField] MoonManagement MoonScript;
+    [SerializeField] GameObject BlackScreen;
 
     private void Start()
     {
@@ -22,6 +23,11 @@ public class EndManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        print(ButtonList[0].interactable);
+    }
+
     public IEnumerator Victory()
     {
         yield return new WaitForSeconds(0.8f);
@@ -29,6 +35,7 @@ public class EndManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         BackgroundAnimator.SetTrigger("TriggerFade");
         yield return new WaitForSeconds(1f);
+        BlackScreen.SetActive(false);
         VictoryAnimator.SetTrigger("TriggerFade");
         yield return new WaitForSeconds(0.5f);
         for (int i3 = 0; i3 < ButtonList.Count; i3++)

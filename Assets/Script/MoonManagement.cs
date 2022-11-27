@@ -60,7 +60,6 @@ public class MoonManagement : MonoBehaviour
         PlaneMaterial.sharedMaterial = MoonShape[MoonShapeRandom];
         Blackhole.EndTime -= 5f;
 
-        VoiceScript.MoonSkillsVoiceLine();
         print("MoonShapeRandom :" + MoonShapeRandom);
 
        
