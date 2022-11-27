@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a3a40f7ddc57ffc48a38e8ac1a2bfac5
+guid: 2cb90fbc21795584996e5f62b9708526
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,18 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: neon_main
+      name: neon_blue
     second: {fileID: 2100000, guid: e6840b998d500224498364afd550c656, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: scifi_grey
-    second: {fileID: 2100000, guid: b780f57ad66ca5b49b0fa1c564397966, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: scifi_white
-    second: {fileID: 2100000, guid: b9d450c9bcce0ff4796459759b75e8f1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
