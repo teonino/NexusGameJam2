@@ -27,7 +27,6 @@ public class HoleVolume : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            print("Vous êtes Mort");
             EndManage.Respawn();
         }
     }

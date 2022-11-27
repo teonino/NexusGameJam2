@@ -65,7 +65,7 @@ public class Slide : MonoBehaviour
         animator.SetBool("Slide", true);
         isSliding = true;
 
-        Player.transform.localScale = new Vector3(Player.transform.localScale.x, slideYScale, Player.transform.localScale.z);
+        gameObject.GetComponentInChildren<CapsuleCollider>().height =  slideYScale;
         rb.AddForce(Vector3.down * 150f, ForceMode.Impulse);
 
         slideTimer = maxSlideTime;
@@ -90,7 +90,7 @@ public class Slide : MonoBehaviour
     void StopSlide()
     {
         isSliding = false;
-        Player.transform.localScale = new Vector3(Player.transform.localScale.x, startYScale, Player.transform.localScale.z);
+        gameObject.GetComponentInChildren<CapsuleCollider>().height = startYScale;
         basicsMovements.speed = startSpeed;
         animator.SetBool("Slide", false);
         animator.SetBool("Run", false);
