@@ -12,7 +12,7 @@ public class JumpSystem : MonoBehaviour
     [Header("Jump Properties")]
     [SerializeField] private float JumpForce;
     [SerializeField] private float JumpPoints;
-    [SerializeField] bool isGrounded = false;
+    [SerializeField] bool isGrounded = true;
 
 
     // Update is called once per frame
@@ -24,6 +24,8 @@ public class JumpSystem : MonoBehaviour
             {
                 print("regular jump");
                 rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+                //gameObject.transform.Translate(Vector3.up * JumpForce);
+                //rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * JumpForce, rb.velocity.z);
                 JumpPoints -= 1;
                 isGrounded = false;
             }
@@ -32,7 +34,8 @@ public class JumpSystem : MonoBehaviour
                 if (SkillsAccessManagement.SkillsAccess[1])
                 {
                     print("Double jump");
-                    rb.AddForce(Vector3.up * (JumpForce - 30), ForceMode.Impulse);
+                    //rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * JumpForce, rb.velocity.z);
+                    rb.AddForce(Vector3.up * (JumpForce/0.5f), ForceMode.Impulse);
                     JumpPoints -= 1;
                     isGrounded = false;
                 }

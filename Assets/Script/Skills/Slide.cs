@@ -19,6 +19,8 @@ public class Slide : MonoBehaviour
     public float slideYScale;
     float startYScale;
 
+    public Animator animator;
+
 
 
     public bool isSliding;
@@ -55,22 +57,26 @@ public class Slide : MonoBehaviour
         if(isSliding)
         {
             SlideMovement();
+            animator.SetBool("Slide Idle", true);
         }
     }
     void StartSlide()
     {
+        animator.SetBool("Slide", true);
         isSliding = true;
 
         Player.transform.localScale = new Vector3(Player.transform.localScale.x, slideYScale, Player.transform.localScale.z);
         rb.AddForce(Vector3.down * 150f, ForceMode.Impulse);
 
         slideTimer = maxSlideTime;
+
+        
     }
 
     void SlideMovement()
     {
-        //Vector3 inputDirection = playerObj.transform.forward;
-        //rb.AddForce(inputDirection.normalized * slideFroce, ForceMode.Force);
+        Vector3 inputDirection = Player.transform.forward;
+        rb.AddForce(inputDirection.normalized * slideFroce, ForceMode.Force);
 
         basicsMovements.speed = Mathf.SmoothDamp(basicsMovements.speed, 0.2f, ref speedDV, 1.5f);
 
@@ -85,6 +91,8 @@ public class Slide : MonoBehaviour
     {
         isSliding = false;
         Player.transform.localScale = new Vector3(Player.transform.localScale.x, startYScale, Player.transform.localScale.z);
+        animator.SetBool("Slide Idle", false);
         basicsMovements.speed = startSpeed;
+        animator.SetBool("Slide", false);
     }
 }

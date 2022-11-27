@@ -25,7 +25,7 @@ public class DashSystem : MonoBehaviour
                 if (DashIsAvaiable)
                 {
                     print(DashIsAvaiable);
-                    rb.AddForce(Player.transform.forward * DashForce, ForceMode.Impulse);
+                    rb.AddForce(transform.forward * DashForce, ForceMode.Impulse);
                     StartCoroutine(DashCooldownCoroutine());
                     DashIsAvaiable = false;
                 }
