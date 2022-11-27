@@ -13,6 +13,7 @@ public class JumpSystem : MonoBehaviour
     [SerializeField] private float JumpForce;
     [SerializeField] private float JumpPoints;
     [SerializeField] bool isGrounded = true;
+    public Animator animator;
 
 
     // Update is called once per frame
@@ -28,11 +29,13 @@ public class JumpSystem : MonoBehaviour
                 //rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * JumpForce, rb.velocity.z);
                 JumpPoints -= 1;
                 isGrounded = false;
+                animator.SetTrigger("Jump");
             }
             else if (JumpPoints == 1)
             {
                 if (SkillsAccessManagement.SkillsAccess[1])
                 {
+                    animator.SetTrigger("Jump");
                     print("Double jump");
                     //rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * JumpForce, rb.velocity.z);
                     rb.AddForce(Vector3.up * (JumpForce/0.5f), ForceMode.Impulse);
