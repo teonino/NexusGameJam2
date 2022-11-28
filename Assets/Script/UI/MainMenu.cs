@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     public GameObject CreditsPanel;
     public GameObject MainPanel;
     public AudioSource MainMusic;
-
+    public AudioSource VoiceVolume;
 
 
 
@@ -49,6 +49,7 @@ public class MainMenu : MonoBehaviour
         HowToPanel.SetActive(false);
         CreditsPanel.SetActive(false);
         MainPanel.SetActive(true);
+        VoiceVolume.Stop();
     }
 
 
