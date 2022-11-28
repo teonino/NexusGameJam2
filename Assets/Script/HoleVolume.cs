@@ -11,6 +11,7 @@ public class HoleVolume : MonoBehaviour
     private float StartTime;
     public float EndTime;
     public float TotalTime;
+    public bool BlackholeIsLaunched = false;
 
     public Voice VoiceScript;
 
@@ -49,6 +50,7 @@ public class HoleVolume : MonoBehaviour
         print("Coroutine entrée");
         StartCoroutine(VoiceScript.Intro());
         yield return new WaitForSeconds(5f);
+        BlackholeIsLaunched = true ;
         firstTime = false;
         StartTime = Time.time;
         print("Coroutine Sortie");

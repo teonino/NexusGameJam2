@@ -14,6 +14,7 @@ public class MoonManagement : MonoBehaviour
     //0 -> Dash
     //1 -> Jump
     //2 -> Slide
+    [SerializeField] public float MalusMoonChange;
     public Voice VoiceScript;
     internal int i = 0;
 
@@ -29,7 +30,10 @@ public class MoonManagement : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Q))
         {
-            GenerateShapeAndColors(); 
+            if (Blackhole.BlackholeIsLaunched == true)
+            {
+                GenerateShapeAndColors();
+            }
         }
         if(VoiceScript == null)
         {
@@ -58,7 +62,7 @@ public class MoonManagement : MonoBehaviour
 
         SkillsAccess[MoonShapeRandom] = true;
         PlaneMaterial.sharedMaterial = MoonShape[MoonShapeRandom];
-        Blackhole.EndTime -= 5f;
+        Blackhole.EndTime -= MalusMoonChange;
 
         print("MoonShapeRandom :" + MoonShapeRandom);
 

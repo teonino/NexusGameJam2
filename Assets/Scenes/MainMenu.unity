@@ -2160,7 +2160,7 @@ PrefabInstance:
     - target: {fileID: 7910399703749055012, guid: e4a8b01c6445d574585ddbd272ede31d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DisplayCredits
+      value: QuitGame
       objectReference: {fileID: 0}
     - target: {fileID: 7910399703749055013, guid: e4a8b01c6445d574585ddbd272ede31d,
         type: 3}

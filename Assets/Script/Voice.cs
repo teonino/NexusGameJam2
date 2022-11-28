@@ -22,8 +22,6 @@ public class Voice : MonoBehaviour
         AudioMenu.clip = Introvoiceline[0];
         AudioMenu.Play();
         yield return new WaitForSeconds(9f);
-        AudioMenu.clip = Technicalvoiceline[4];
-        AudioMenu.Play();
     }
 
 
