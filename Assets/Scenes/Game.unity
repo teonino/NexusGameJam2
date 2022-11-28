@@ -13915,7 +13915,7 @@ PrefabInstance:
     - target: {fileID: 3365969321627117075, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
         type: 3}
       propertyPath: MalusMoonChange
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3365969321627117077, guid: 4a6d24e6f64c05e40ba972e3fd6c734b,
         type: 3}
